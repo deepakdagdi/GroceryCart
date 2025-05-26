@@ -1,7 +1,10 @@
 import jwt from "jsonwebtoken";
 
 const authUser = async(req, res, next) => {
-    const {token} = req.cookies;
+
+
+    try{
+            const token = req.cookies.token;
     
     console.log(token)
     if(!token){
@@ -10,17 +13,6 @@ const authUser = async(req, res, next) => {
         return res.json({success : false , message:"Not Authorized"});
 
         }
-
-        // try {
-        //     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        //     req.user = await User.findById(decoded.id).select("-password"); // safe to exclude password
-            
-        //     next();
-        //   } catch (err) {
-        //     console.error(err);
-        //     res.status(401).json({ message: "Invalid token" });
-        //   }
-    try{
     const tokenDecode= jwt.verify(token, process.env.JWT_SECRET)
     if(tokenDecode.id){
     
