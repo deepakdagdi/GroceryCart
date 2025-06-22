@@ -7,9 +7,10 @@ import User from "../models/User.js";
 //place Order COD : /api/order/cod
 export const placeOrderCOD = async (req, res) => {
   try {
-    const userId=req.user;
     
+    const userId = req.user;
     const { items, address } = req.body;
+    
     if (!address || items.length === 0) {
       return res.json({ success: false, message: "Invalid data" });
     }
@@ -40,8 +41,8 @@ export const placeOrderCOD = async (req, res) => {
 // Place Order Stripe : /api/order/stripe
 export const placeOrderStripe = async (req, res) => {
   try {
-    const userId =req.user;
-    const { items, address } = req.body;
+    const userId = req.user;
+    const {items, address } = req.body;
     const {origin}= req.headers;
 
     if (!address || items.length === 0) {
@@ -141,6 +142,9 @@ export const stripeWebHooks =async (request , response) => {
         });
 
         const {orderId,userId} = session.data[0].metadata;
+        console.log("orderId="+orderId);
+        console.log("userId="+userId);
+
         //Mark payment as paid 
         await Order.findByIdAndUpdate(orderId,{isPaid: true})
         //Clear user Cart
