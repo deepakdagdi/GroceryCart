@@ -5,13 +5,9 @@ import User from "../models/User.js";
 export const updateCart = async (req , res ) => {
      
     try {
-        //here any probleam is genreated with the userid so you can use the logic of userAuth and think about logic
-
-         //const {userId,cartItems}= req.user;
          const userId= req.user;
          const {cartItems} =req.body;
-        //  console.log("userID=" +req.user);
-        // console.log("cartItems="+cartItems)
+       
          await User.findByIdAndUpdate(userId,{cartItems})
          res.json({success: true,message:"Cart Updated"})
 

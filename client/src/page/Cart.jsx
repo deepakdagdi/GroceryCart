@@ -81,7 +81,7 @@ const Cart = () => {
         try {
             const {data}= await axios.get('/api/address/get')
             if(data.success){
-              console.log(data.addresses);
+            
             
                  const addresses = data.addresses || [];
                setAddresses(addresses)
