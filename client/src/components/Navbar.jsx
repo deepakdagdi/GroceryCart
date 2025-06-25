@@ -48,7 +48,7 @@ const Navbar =()=>{
    <NavLink to="/">Home</NavLink> 
    <NavLink to="/products">All Product</NavLink> 
    <NavLink to="/contact">Contact</NavLink> 
-   <NavLink to="/seller">Admin</NavLink> 
+   <NavLink to="/seller">Seller</NavLink> 
     
 
     <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-e-2xl">

@@ -8,7 +8,7 @@ const BestSeller = () => {
   return (
     <div className="mt-16">
       <p className="text-2xl md:text-3xl font-medium">Best Seller</p>
-       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 lg:grid-cols-5 mt-6  
+       <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 gap-3 md:gap-12 lg:grid-cols-5 lg:gap-12 mt-6  
                       ">
                       
         
