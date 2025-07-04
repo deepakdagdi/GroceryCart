@@ -48,7 +48,8 @@ const Navbar =()=>{
    <NavLink to="/">Home</NavLink> 
    <NavLink to="/products">All Product</NavLink> 
    <NavLink to="/contact">Contact</NavLink> 
-   <NavLink to="/seller">Seller</NavLink> 
+   <NavLink to="/seller"
+    className="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors duration-200">Admin</NavLink> 
     
 
     <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-e-2xl">
