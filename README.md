@@ -1,7 +1,11 @@
-                                                          🛒 GroceryCart – Project Overview
+                                             🛒 GroceryCart – Project Overview
 
 GroceryCart is a full-stack e-commerce web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with secure payment integration via Stripe. The platform allows users to explore a variety of grocery items, manage their cart, and complete purchases online. An admin panel allows store managers to control inventory, view orders, and manage users.This project simulates a real-world grossery
 grocery delivery system and demonstrates the use of modern web development tools, API integrations, role-based access control, and secure payment handling.
+
+🔗 Live URLs
+- [Frontend]     https://grossery-cart.vercel.app 
+- [Backend API]  https://grossery-cart-backend.vercel.app
 
 🎯 Project Objectives
 
